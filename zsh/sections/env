@@ -1,0 +1,23 @@
+export CC=clang
+export EDITOR="atom"
+export DEFAULT_USER=alangardner
+
+export PYTHONPATH=$PYTHONPATH:/usr/local/Cellar/python/2.7.7_2/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages
+
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/jruby/bin:$PATH
+
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin/dotfiles/bin
+
+export PATH=$PATH:/usr/local/share/npm/bin
+export NODE_PATH=/usr/local/lib/node_modules
+
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=$PATH:${ANDROID_HOME}/tools
+
+export KUBERNETES_PROVIDER=vagrant
+export KUBERNETES_MASTER_MEMORY=1536
+export KUBERNETES_NODE_MEMORY=4096
+export KUBE_ENABLE_INSECURE_REGISTRY=true
+
+source ~/bin/private/projects/current

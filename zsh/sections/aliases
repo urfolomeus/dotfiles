@@ -1,0 +1,109 @@
+## functions
+
+function mcd() {
+  mkdir $1 && cd 1
+}
+
+## bash
+alias :q='exit'
+alias c='clear'
+alias ea='vim ~/bin/dotfiles/zsh/sections/aliases'
+alias ed='atom'
+alias grep='grep --color -nr'
+alias la='ls -la'
+alias ll='ls -l'
+alias mcd='mcd'
+alias mysqlstop='mysql.server stop'
+alias mysqlstart='mysql.server start'
+alias nudge='. ~/.zshrc'
+alias pg='postgres -D /usr/local/var/postgres'
+alias pgd='nohup postgres -D /usr/local/var/postgres > /tmp/pg.log 2>&1 &'
+alias serve='python -m SimpleHTTPServer'
+alias sublime='~/bin/dotfiles/sublime'
+
+## elixir
+alias ipx='iex -S mix phoenix.server'
+
+## javascript
+alias npmls='npm ls --depth=0'
+alias nrm='clear && npm run mocha --silent'
+alias nrt='clear && npm run test --silent'
+
+## testing
+alias bec='clear && bundle exec cucumber'
+alias berc='clear && bundle exec rspec; bundle exec cucumber'
+alias berk='clear && bundle exec rake'
+alias bert='clear && bundle exec rake test'
+alias bifta='clear && bundle exec cucumber -f html -o tmp/cukes.html; open tmp/cukes.html; bundle exec rspec spec'
+alias cbr='clear && bundle exec rspec'
+
+
+## rails
+alias migrate="bundle exec rake db:migrate db:test:prepare"
+alias remigrate="bundle exec rake db:migrate:redo db:test:prepare"
+alias unmigrate="bundle exec rake db:rollback db:test:prepare"
+alias rdbfl="rake db:fixtures:load"
+alias rdbm="rake db:migrate"
+alias rdbr="rake db:rollback"
+alias rdbs="rake db:seed"
+alias rdbtp="rake db:test:prepare"
+
+alias be="bundle exec"
+alias rc="rails console"
+
+alias rg="rails generate"
+alias rgc="rails generate controller"
+alias rgm="rails generate model"
+alias rgmg="rails generate migration"
+alias rgs="rails generate scaffold"
+alias rs="rails server"
+
+
+##heroku
+alias hp="heroku_helper production"
+alias hs="heroku_helper staging"
+
+alias hpc="heroku_helper production run console"
+alias hpl="heroku_helper production logs"
+alias hprdbm="heroku_helper production run rake db:migrate"
+
+alias hsc="heroku_helper staging run console"
+alias hsl="heroku_helper staging logs"
+alias hsrdbm="heroku_helper staging run rake db:migrate"
+
+## git
+alias ga="git add -A"
+alias gb="git br"
+alias gcl="git clone"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gcp="git cherry-pick"
+alias gd="git diff"
+alias gdt="git difftool"
+alias gdtc="git difftool --cached"
+alias gfo="git fetch origin"
+alias gi="git init"
+alias gl="git hist"
+alias glfp="git histfp"
+alias gm="git merge"
+alias gpl="git pull"
+alias gplo="git pull origin"
+alias gpr="git pull --rebase"
+alias gpro="git pull --rebase origin"
+alias gps="git push"
+alias gpsh="git push heroku"
+alias gpso="git push origin"
+alias grh="git reset HEAD"
+alias gs="git st"
+alias gst="git stash"
+alias gsta="git stash apply"
+
+## rake
+alias rr="rake routes"
+alias rT="rake -T"
+
+## vagrant
+alias va='vagrant'
+alias vi='vagrant init'
+alias vu='vagrant up'
+alias vd='vagrant destroy'
