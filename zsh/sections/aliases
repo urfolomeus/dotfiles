@@ -15,14 +15,18 @@ alias ll='ls -l'
 alias mcd='mcd'
 alias mysqlstop='mysql.server stop'
 alias mysqlstart='mysql.server start'
-alias nudge='. ~/.zshrc'
+alias nudge='source ~/.zshrc'
 alias pg='postgres -D /usr/local/var/postgres'
 alias pgd='nohup postgres -D /usr/local/var/postgres > /tmp/pg.log 2>&1 &'
 alias serve='python -m SimpleHTTPServer'
 alias sublime='~/bin/dotfiles/sublime'
 
 ## elixir
-alias ipx='iex -S mix phoenix.server'
+alias imx='iex -S mix'
+alias ipx='imx phoenix.server'
+alias mec='mix ecto.create'
+alias mem='mix ecto.migrate'
+alias med='mix ecto.drop'
 
 ## javascript
 alias npmls='npm ls --depth=0'
