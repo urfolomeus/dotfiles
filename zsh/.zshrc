@@ -87,3 +87,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/bin/dotfiles/zsh/sections/aliases
 source ~/bin/dotfiles/zsh/sections/env
 source ~/bin/dotfiles/zsh/sections/custom
+
+# added by travis gem
+[ -f /Users/alangardner/.travis/travis.sh ] && source /Users/alangardner/.travis/travis.sh
+export PATH="/usr/local/opt/openssl/bin:$PATH"
