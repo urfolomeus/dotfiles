@@ -78,6 +78,7 @@ alias hsrdbm="heroku_helper staging run rake db:migrate"
 ## git
 alias ga="git add -A"
 alias gb="git br"
+alias gba="git bra"
 alias gcl="git clone"
 alias gcm="git commit -m"
 alias gco="git checkout"
