@@ -23,7 +23,7 @@ alias serve='python -m SimpleHTTPServer'
 
 ## elixir
 alias imx='iex -S mix'
-alias ipx='imx phoenix.server'
+alias ipx='imx phx.server'
 alias mec='mix ecto.create'
 alias mem='mix ecto.migrate'
 alias med='mix ecto.drop'
