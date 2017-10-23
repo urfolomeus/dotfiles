@@ -25,3 +25,5 @@ source ~/bin/private/projects/current
 
 # enable Erlang shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
+
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
