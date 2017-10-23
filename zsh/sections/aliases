@@ -7,8 +7,8 @@ function mcd() {
 ## bash
 alias :q='exit'
 alias c='clear'
-alias ea='vim ~/bin/dotfiles/zsh/sections/aliases'
-alias ed='atom'
+alias ea='nvim ~/bin/dotfiles/zsh/sections/aliases'
+alias ed='nvim'
 alias grep='grep --color -nr'
 alias la='ls -la'
 alias ll='ls -l'
