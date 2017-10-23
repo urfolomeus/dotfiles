@@ -18,6 +18,7 @@ alias mysqlstart='mysql.server start'
 alias nudge='source ~/.zshrc'
 alias pg='postgres -D /usr/local/var/postgres'
 alias pgd='nohup postgres -D /usr/local/var/postgres > /tmp/pg.log 2>&1 &'
+alias redisd='nohup redis-server --daemonize yes /usr/local/etc/redis.conf > /tmp/redis.log 2>&1 &'
 alias serve='python -m SimpleHTTPServer'
 alias sublime='~/bin/dotfiles/sublime'
 
