@@ -22,3 +22,6 @@ export KUBERNETES_NODE_MEMORY=4096
 export KUBE_ENABLE_INSECURE_REGISTRY=true
 
 source ~/bin/private/projects/current
+
+# enable Erlang shell history
+export ERL_AFLAGS="-kernel shell_history enabled"
