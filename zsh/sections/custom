@@ -1,3 +1,4 @@
+. ~/bin/dotfiles/zsh/sections/addons/zsh
 . ~/bin/dotfiles/zsh/sections/addons/asdf
 . ~/bin/dotfiles/zsh/sections/addons/yarn
 # source ./addons/heroku
