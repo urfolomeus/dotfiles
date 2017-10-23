@@ -23,6 +23,8 @@ export KUBE_ENABLE_INSECURE_REGISTRY=true
 
 source ~/bin/private/projects/current
 
+export KEYTIMEOUT=1
+
 # enable Erlang shell history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
