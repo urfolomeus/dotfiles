@@ -1,15 +1,18 @@
 source ~/.asdf/asdf.fish
 
-set fish_greeting ""
+set fish_greeting "Do you want me to sit in a corner and rust, or just fall apart where I’m standing?"
 
 set -gx EDITOR "nvim"
 set -gx DEFAULT_USER "alangardner"
 set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
+set -gx GOPATH $HOME/src/go
 
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
 set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
-set -gx fish_user_paths "/Users/alangardner/.asdf/installs/nodejs/10.2.1/.npm/bin" $fish_user_paths
+set -gx fish_user_paths "/Users/alangardner/.asdf/installs/nodejs/10.9.0/.npm/bin" $fish_user_paths
+set -gx fish_user_paths $GOPATH/bin $fish_user_paths
+set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
 
 
 # enable Erlang shell history
@@ -67,9 +70,17 @@ alias beru="be rubocop"
 alias br="bin/rails"
 alias migrate="bin/rails db:migrate; and env RAILS_ENV=test bin/rails db:migrate"
 alias rc="bundle exec rails c"
-alias rg="bundle exec rails g"
 alias rs="bundle exec rails s"
 
 # rake
 alias rr="clear; and bundle exec rake routes"
 alias rT="clear; and bundle exec rake -T"
+
+# vagrant
+alias vg="vagrant"
+alias vu="vagrant up"
+alias vs="vagrant ssh"
+
+# zeus (for OrderWeb)
+alias zs="env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES zeus start"
+
