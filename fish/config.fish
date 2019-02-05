@@ -34,6 +34,7 @@ set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 # general
 alias :q="exit"
+alias bejs="bundle exec jekyll serve"
 alias c="clear"
 alias ed="nvim"
 alias md="mkdir"
