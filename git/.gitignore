@@ -3,3 +3,5 @@
 .tool-versions
 .*vimrc
 .byebug_history
+.elixir_ls
+zeus.log
