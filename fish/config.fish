@@ -12,7 +12,6 @@ set -gx EDITOR "nvim"
 set -gx DEFAULT_USER "alangardner"
 set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
 set -gx GOPATH $HOME/src/go
-set -gx STAGING_RESET_GITHUB_TOKEN 8202c827ef1bbfb46910c8ec24aaa5f3c5e8bc35
 
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
