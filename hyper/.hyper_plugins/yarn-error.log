@@ -1,0 +1,52 @@
+Arguments: 
+  /Applications/Hyper.app/Contents/MacOS/Hyper /Applications/Hyper.app/Contents/Resources/bin/yarn-standalone.js install --no-emoji --no-lockfile --cache-folder /Users/alangardner/.hyper_plugins/cache
+
+PATH: 
+  undefined
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  8.2.1
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "hyper-plugins",
+    "description": "Auto-generated from `~/.hyper.js`!",
+    "private": true,
+    "version": "0.0.1",
+    "repository": "zeit/hyper",
+    "license": "MIT",
+    "homepage": "https://hyper.is",
+    "dependencies": {
+      "hyperterm-panda": "latest",
+      "hypercwd": "latest",
+      "hyper-pane": "latest",
+      "hyper-tabs-enhanced": "latest",
+      "hyper-search": "latest",
+      "hyper-save-text": "latest"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/hyper-save-text: Not found
+      at Request.params.callback [as _callback] (/Applications/Hyper.app/Contents/Resources/bin/yarn-standalone.js:65368:18)
+      at Request.self.callback (/Applications/Hyper.app/Contents/Resources/bin/yarn-standalone.js:121753:22)
+      at emitTwo (events.js:125:13)
+      at Request.emit (events.js:213:7)
+      at Request.<anonymous> (/Applications/Hyper.app/Contents/Resources/bin/yarn-standalone.js:122736:10)
+      at emitOne (events.js:115:13)
+      at Request.emit (events.js:210:7)
+      at IncomingMessage.<anonymous> (/Applications/Hyper.app/Contents/Resources/bin/yarn-standalone.js:122656:12)
+      at Object.onceWrapper (events.js:314:30)
+      at emitNone (events.js:110:20)

@@ -114,7 +114,7 @@ module.exports = {
     copyOnSelect: true,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
-    defaultSSHApp: true
+    defaultSSHApp: true,
 
     // if `true` (without backticks and without quotes), on right click selected text will be copied or pasted if no
     // selection is present (`true` by default on Windows and disables the context menu feature)
@@ -124,6 +124,12 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    // config for hyper-tabs-enhanced
+    hyperTabs: {
+      trafficButtons: true,
+      tabIconsColored: true,
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -133,11 +139,13 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    "hyper-whimsy",
+    'hyperterm-panda',
     "hypercwd",
     "hyper-pane",
     "hyper-tabs-enhanced",
-    "hyper-search"
+    "hyper-search",
+    "hyper-savetext",
+    "hyper-opacity",
   ],
 
   // in development, you can create a directory under
