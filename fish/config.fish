@@ -12,6 +12,7 @@ set -gx EDITOR "nvim"
 set -gx DEFAULT_USER "alangardner"
 set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
 set -gx GOPATH $HOME/src/go
+set -gx STAGING_RESET_GITHUB_TOKEN 8202c827ef1bbfb46910c8ec24aaa5f3c5e8bc35
 
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
@@ -27,6 +28,10 @@ set -gx ERL_AFLAGS "-kernel shell_history enabled"
 # options for FZF
 set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
+function openrubydoc
+  set v (ruby --version | egrep -o '(\d+\.)+\d+')
+  open "https://ruby-doc.org/core-$v/"
+end
 
 ##
 # aliases
@@ -41,7 +46,15 @@ alias md="mkdir"
 alias nudge="source ~/.config/fish/config.fish"
 alias pg="postgres -D /usr/local/var/postgres"
 alias pgd="nohup postgres -D /usr/local/var/postgres > /tmp/pg.log 2>&1"
+alias rd=openrubydoc
 alias serve='python -m SimpleHTTPServer'
+
+# elixir
+alias imx="iex -S mix"
+alias ipx="iex -S mix phx.server"
+
+# docker
+alias dcu="docker-compose up"
 
 # git
 alias ga="git add ."
@@ -60,10 +73,6 @@ alias gl="git hist"
 alias gs="git st"
 alias gst="git stash"
 alias gstp="git stash pop"
-
-# elixir
-alias imx="iex -S mix"
-alias ipx="iex -S mix phx.server"
 
 # javascript
 alias npmls="npm ls --depth=0"
