@@ -1,0 +1,108 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "[go]": {},
+  "[markdown]": {
+    "editor.quickSuggestions": false,
+    "editor.wordWrap": "bounded"
+  },
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.rulers": [100],
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "HTML (Eex)": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    {
+      "language": "vue",
+      "autoFix": true
+    },
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    }
+  ],
+  "explorer.confirmDragAndDrop": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": false,
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "git.enableSmartCommit": true,
+  "gitlens.keymap": "chorded",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "ruby.intellisense": "rubyLocate",
+  "spellright.language": ["en-GB"],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/_build": true,
+    "**/deps": true
+  },
+  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontSize": 16,
+  "vetur.completion.useScaffoldSnippets": false,
+  "vetur.validation.template": false,
+  // "vim.enableNeovim": true,
+  // "vim.useSystemClipboard": true,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Nord",
+  "workbench.editor.swipeToNavigate": true,
+  "workbench.fontAliasing": "antialiased",
+  "workbench.iconTheme": "file-icons",
+  "workbench.startupEditor": "newUntitledFile",
+  "breadcrumbs.enabled": true,
+  "explorer.autoReveal": false,
+  "liveshare.audio.startCallOnShare": true,
+  "csv-preview.theme": "coral",
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "search.showLineNumbers": true,
+  "search.useGlobalIgnoreFiles": true,
+  "workbench.quickOpen.closeOnFocusLost": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "prettier.eslintIntegration": true,
+  "[elixir]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
+  "elixirLinter.useStrict": true
+}
