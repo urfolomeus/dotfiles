@@ -4,7 +4,8 @@ if not functions -q fisher
     fish -c fisher
 end
 
-source ~/.asdf/asdf.fish
+source /usr/local/opt/asdf/asdf.fish
+source /usr/local/share/fish/vendor_completions.d/asdf.fish
 
 set fish_greeting "Do you want me to sit in a corner and rust, or just fall apart where I’m standing?"
 
@@ -16,16 +17,16 @@ set -gx GOPATH $HOME/src/go
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
 set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
-set -gx fish_user_paths "/Users/alangardner/.asdf/installs/nodejs/10.9.0/.npm/bin" $fish_user_paths
+#set -gx fish_user_paths "/Users/alangardner/.asdf/installs/nodejs/10.9.0/.npm/bin" $fish_user_paths
 set -gx fish_user_paths $GOPATH/bin $fish_user_paths
-set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
+#set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
 
 
 # enable Erlang shell history
-set -gx ERL_AFLAGS "-kernel shell_history enabled"
+#set -gx ERL_AFLAGS "-kernel shell_history enabled"
 
 # options for FZF
-set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+#set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 function openrubydoc
   set v (ruby --version | egrep -o '(\d+\.)+\d+')
