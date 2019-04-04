@@ -13,6 +13,7 @@ set -gx EDITOR "nvim"
 set -gx DEFAULT_USER "alangardner"
 set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
 set -gx GOPATH $HOME/src/go
+set -gx KERL_CONFIGURE_OPTIONS "--disable-debug --without-javac" # don't install Java when building Erlang
 
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
