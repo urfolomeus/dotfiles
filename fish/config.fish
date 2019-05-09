@@ -15,6 +15,8 @@ set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/
 set -gx GOPATH $HOME/src/go
 set -gx KERL_CONFIGURE_OPTIONS "--disable-debug --without-javac" # don't install Java when building Erlang
 
+source /Users/alangardner/bin/private/super_secret_env_vars.fish
+
 # path
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
 set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
