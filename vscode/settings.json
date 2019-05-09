@@ -75,7 +75,7 @@
   // "vim.enableNeovim": true,
   // "vim.useSystemClipboard": true,
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Jeng Light",
   "workbench.editor.swipeToNavigate": true,
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "file-icons",
