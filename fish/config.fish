@@ -9,7 +9,7 @@ source /usr/local/share/fish/vendor_completions.d/asdf.fish
 
 set fish_greeting "Do you want me to sit in a corner and rust, or just fall apart where I’m standing?"
 
-set -gx EDITOR "nvim"
+set -gx EDITOR "vim"
 set -gx DEFAULT_USER "alangardner"
 set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
 set -gx GOPATH $HOME/src/go
