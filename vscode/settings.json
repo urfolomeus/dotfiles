@@ -105,6 +105,7 @@
     "files.insertFinalNewline": true
   },
   "elixirLinter.useStrict": true,
+  "liveshare.featureSet": "stable",
   "gitlens.views.repositories.location": "scm",
   "gitlens.views.fileHistory.location": "explorer",
   "gitlens.views.lineHistory.location": "explorer",
