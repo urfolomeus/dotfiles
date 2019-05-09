@@ -104,5 +104,9 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true
   },
-  "elixirLinter.useStrict": true
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.views.lineHistory.location": "explorer",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens"
 }
