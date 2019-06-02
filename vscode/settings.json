@@ -1,10 +1,22 @@
 // Place your settings in this file to overwrite the default settings
 {
   "[go]": {},
+  "[elixir]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnType": false,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true
+  },
   "[markdown]": {
     "editor.quickSuggestions": false,
     "editor.wordWrap": "bounded"
   },
+  "breadcrumbs.enabled": true,
+  "csv-preview.theme": "coral",
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
@@ -16,6 +28,7 @@
   "editor.rulers": [100],
   "editor.tabCompletion": "on",
   "editor.tabSize": 2,
+  "elixirLinter.useStrict": true,
   "emmet.includeLanguages": {
     "HTML (Eex)": "html"
   },
@@ -40,6 +53,8 @@
       "autoFix": true
     }
   ],
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": false,
@@ -47,7 +62,6 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
-  "gitlens.keymap": "chorded",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -60,6 +74,22 @@
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
+  "gitlens.keymap": "chorded",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.views.lineHistory.enabled": true,
+  "gitlens.views.lineHistory.location": "explorer",
+  "gitlens.views.repositories.files.layout": "auto",
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.search.location": "gitlens",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "liveshare.audio.startCallOnShare": true,
+  "liveshare.featureSet": "stable",
+  "prettier.eslintIntegration": true,
+  // "prettier.semi": false,
+  // "prettier.singleQuote": true,
+  // "prettier.trailingComma": "es5",
   "ruby.intellisense": "rubyLocate",
   "spellright.language": ["en-GB"],
   "search.exclude": {
@@ -68,47 +98,23 @@
     "**/_build": true,
     "**/deps": true
   },
+  "search.showLineNumbers": true,
+  "search.useGlobalIgnoreFiles": true,
   "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.fontSize": 16,
-  "vetur.completion.useScaffoldSnippets": false,
+  "vetur.completion.useScaffoldSnippets": true,
   "vetur.validation.template": false,
   // "vim.enableNeovim": true,
   // "vim.useSystemClipboard": true,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Jeng Light",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "file-icons",
-  "workbench.startupEditor": "newUntitledFile",
-  "breadcrumbs.enabled": true,
-  "explorer.autoReveal": false,
-  "liveshare.audio.startCallOnShare": true,
-  "csv-preview.theme": "coral",
-  "explorer.confirmDelete": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "gitlens.views.repositories.files.layout": "auto",
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
-  "search.showLineNumbers": true,
-  "search.useGlobalIgnoreFiles": true,
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "prettier.eslintIntegration": true,
-  "[elixir]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.wordBasedSuggestions": false,
-    "editor.formatOnType": false,
-    "editor.acceptSuggestionOnEnter": "on",
-    "editor.trimAutoWhitespace": false,
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true
-  },
-  "elixirLinter.useStrict": true,
-  "liveshare.featureSet": "stable",
-  "gitlens.views.repositories.location": "scm",
-  "gitlens.views.fileHistory.location": "explorer",
-  "gitlens.views.lineHistory.location": "explorer",
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.search.location": "gitlens"
+  "workbench.startupEditor": "newUntitledFile",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
