@@ -18,11 +18,12 @@ set -gx KERL_CONFIGURE_OPTIONS "--disable-debug --without-javac" # don't install
 source /Users/alangardner/bin/private/super_secret_env_vars.fish
 
 # path
-set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
-set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
-#set -gx fish_user_paths "/Users/alangardner/.asdf/installs/nodejs/10.9.0/.npm/bin" $fish_user_paths
-set -gx fish_user_paths $GOPATH/bin $fish_user_paths
-#set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
+# set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
+set -g fish_user_paths "/usr/local" $fish_user_paths
+# set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
+# set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
+# set -gx fish_user_paths $GOPATH/bin $fish_user_paths
+# set -gx PKG_CONFIG_PATH "/usr/local/opt/libxml2/lib/pkgconfig"
 
 
 # enable Erlang shell history
