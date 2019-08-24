@@ -32,5 +32,15 @@
   {
     "key": "cmd+k cmd+l",
     "command": "editor.action.transformToLowercase"
+  },
+  {
+    "key": "alt+d",
+    "command": "-task.complete",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-task.new",
+    "when": "editorTextFocus"
   }
 ]
