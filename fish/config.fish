@@ -101,4 +101,4 @@ alias vu="vagrant up"
 alias vs="vagrant ssh"
 
 # add work stuff
-source /Users/alangardner/bin/private/deliveroo.fish
+source ~/.config/fish/deliveroo.fish
