@@ -584,7 +584,7 @@
 	<key>HapticFeedbackForEsc</key>
 	<true/>
 	<key>HideTab</key>
-	<false/>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -635,7 +635,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>168 292 810 592 0 0 1920 1200 </string>
+	<string>0 0 810 567 0 0 1920 1200 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1296,7 +1296,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>469B1993-BD3B-47E9-A93F-CAB185CFD66F</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>8</integer>
+	<integer>9</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2047,7 +2047,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-26T09:04:30Z</date>
+	<date>2019-08-26T14:00:34Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SoundForEsc</key>
