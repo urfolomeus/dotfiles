@@ -16,12 +16,13 @@ set -gx GOPATH $HOME/src/go
 set -gx KERL_CONFIGURE_OPTIONS "--disable-debug --without-javac" # don't install Java when building Erlang
 
 # path
+set -gx fish_user_paths "/Applications/Postgres.app/Contents/Versions/latest/bin" $fish_user_paths
 # set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
 set -g fish_user_paths "/usr/local" $fish_user_paths
-# set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
-# set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
+set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
+set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
 # set -gx fish_user_paths $GOPATH/bin $fish_user_paths
-# set -gx PKG_CONFIG_PATH "/usr/local/opt/libxml2/lib/pkgconfig"
+set -gx PKG_CONFIG_PATH "/usr/local/opt/libxml2/lib/pkgconfig"
 
 
 # enable Erlang shell history
