@@ -21,6 +21,9 @@
   "[proto3]": {
     "editor.tabSize": 4,
   },
+  "[python]": {
+    "editor.tabSize": 4,
+  },
   "breadcrumbs.enabled": true,
   "csv-preview.theme": "coral",
   "editor.fontFamily": "Fira Code",
@@ -28,7 +31,7 @@
   "editor.fontSize": 16,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.formatOnType": false,
+  "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.rulers": [
@@ -183,12 +186,19 @@
   "vetur.validation.template": false,
   // "vim.enableNeovim": true,
   // "vim.useSystemClipboard": true,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": -1,
   "workbench.colorTheme": "Jeng Light",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.swipeToNavigate": true,
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "file-icons",
   "workbench.quickOpen.closeOnFocusLost": false,
-  "workbench.startupEditor": "newUntitledFile"
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "grammarly.dialect": "british",
+  "grammarly.password": "wRqGg7CydVgvsjU,tcUJPdUY",
+  "grammarly.username": "urfolomeus@gmail.com",
+  "python.formatting.provider": "black"
 }
