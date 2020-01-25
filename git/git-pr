@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+local ref="$(git symbolic-ref HEAD 2> /dev/null)"
+local git_current_branch="${ref#refs/heads/}"
+
+open "https://github.com/deliveroo/${PWD##*/}/pull/new/${git_current_branch}"

@@ -11,16 +11,6 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+alt+c",
-    "command": "gitlens.showQuickCommitFileDetails",
-    "when": "editorTextFocus && gitlens:enabled"
-  },
-  {
-    "key": "alt+c",
-    "command": "task.cancel",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "cmd+k cmd+u",
     "command": "-editor.action.removeCommentLine",
     "when": "editorTextFocus && !editorReadonly"
@@ -34,6 +24,11 @@
     "command": "editor.action.transformToLowercase"
   },
   {
+    "key": "alt+c",
+    "command": "task.cancel",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "alt+d",
     "command": "-task.complete",
     "when": "editorTextFocus"
@@ -42,5 +37,15 @@
     "key": "cmd+enter",
     "command": "-task.new",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+enter",
+    "command": "extension.jumpy-word",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "Escape",
+    "command": "extension.jumpy-exit",
+    "when": "editorTextFocus && jumpy.isJumpyMode"
   }
 ]
