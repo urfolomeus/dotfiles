@@ -4,32 +4,53 @@ if not functions -q fisher
     fish -c fisher
 end
 
-source /usr/local/opt/asdf/asdf.fish
-source /usr/local/share/fish/vendor_completions.d/asdf.fish
+# asdf
+#source /usr/local/opt/asdf/asdf.fish
+#source /usr/local/share/fish/vendor_completions.d/asdf.fish
 
 set fish_greeting "Do you want me to sit in a corner and rust, or just fall apart where I’m standing?"
 
 set -gx EDITOR "vim"
 set -gx DEFAULT_USER "alangardner"
-set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
-set -gx GOPATH $HOME/src/go
+#set -gx JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk-1.8.0_162.jdk/Contents/Home"
+#set -gx GOPATH $HOME/src/go
 set -gx KERL_CONFIGURE_OPTIONS "--disable-debug --without-javac" # don't install Java when building Erlang
 
 # path
 set -gx fish_user_paths "/Applications/Postgres.app/Contents/Versions/latest/bin" $fish_user_paths
-# set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
+#set -gx fish_user_paths "/Users/alangardner/.config/yarn/global" $fish_user_paths
+#set -gx fish_user_paths $GOPATH/bin $fish_user_paths
 set -g fish_user_paths "/usr/local" $fish_user_paths
 set -g fish_user_paths "/usr/local/opt/openssl/bin" $fish_user_paths
 set -gx fish_user_paths "/usr/local/opt/gettext/bin" $fish_user_paths
-# set -gx fish_user_paths $GOPATH/bin $fish_user_paths
+
 set -gx PKG_CONFIG_PATH "/usr/local/opt/libxml2/lib/pkgconfig"
 
+# nvm
+set -gx NVM_DIR $HOME"/.nvm"
+function nvm
+    bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
+end
+
+# rbenv
+# For compilers to find readline you may need to set:
+# set -gx LDFLAGS "-L/usr/local/opt/readline/lib"
+# set -gx CPPFLAGS "-I/usr/local/opt/readline/include"
+# For pkg-config to find readline you may need to set:
+# set -gx PKG_CONFIG_PATH "/usr/local/opt/readline/lib/pkgconfig"
+# ruby-build installs a non-Homebrew OpenSSL for each Ruby version installed and these are never upgraded.
+# To link Rubies to Homebrew's OpenSSL 1.1 (which is upgraded) add the following to your ~/.config/fish/config.fish:
+# export RUBY_CONFIGURE_OPTS="--with-openssl-dir=(brew --prefix openssl@1.1)"
+# The above didn't work so I used the following instead
+# set -gx RUBY_CONFIGURE_OPTS "--with-openssl-dir "(brew --prefix openssl@1.1)
+# Load rbenv automatically
+status --is-interactive; and source (rbenv init -|psub)
 
 # enable Erlang shell history
-set -gx ERL_AFLAGS "-kernel shell_history enabled"
+# set -gx ERL_AFLAGS "-kernel shell_history enabled"
 
 # options for FZF
-set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
+# set -gx FZF_DEFAULT_COMMAND 'ag --hidden --ignore .git -g ""'
 
 ##
 # aliases
@@ -45,6 +66,7 @@ alias todos="code ~/Dropbox\ \(Personal\)/Apps/TaskMator"
 
 # docker
 alias dcu="docker-compose up"
+alias dce="docker-compose exec"
 
 # elixir
 alias imx="iex -S mix"
@@ -102,4 +124,11 @@ alias vu="vagrant up"
 alias vs="vagrant ssh"
 
 # add work stuff
-source ~/.config/fish/deliveroo.fish
+# source ~/.config/fish/deliveroo.fish
+
+# set -gx fish_user_paths "/Users/alangardner/opt/anaconda3/bin" $fish_user_paths
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+# eval /Users/alangardner/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
