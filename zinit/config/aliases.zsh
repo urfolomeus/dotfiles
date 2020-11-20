@@ -19,7 +19,7 @@ alias reclaim='sudo swapoff -a; sudo swapon -a'
 # alias grep='grep --color -nr'
 
 # ls commands
-alias ls='ls -h --color=auto'
+alias ls='ls -h -G'
 alias la='ls -lA'
 
 
