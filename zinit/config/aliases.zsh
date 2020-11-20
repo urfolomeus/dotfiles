@@ -81,7 +81,3 @@ alias kx="kubectl config get-contexts"
 # ====
 alias be="bundle exec"
 
-
-# PROJECT
-# =======
-source "$HOME/.config/mine/project_aliases.zsh"
