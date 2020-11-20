@@ -45,4 +45,3 @@ do
   [ -s "${file}" ] && source "${file}"
 done
 
-eval "$(direnv hook zsh)"

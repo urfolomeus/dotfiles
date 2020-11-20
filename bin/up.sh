@@ -17,3 +17,4 @@ ln -s $PWD/../private/git/gitconfig $HOME/.gitconfig
 echo "Setting up zsh..."
 
 ln -s $PWD/zinit/.zshrc $HOME/.zshrc
+ln -s $PWD/zinit/.zprofile $HOME/.zprofile
