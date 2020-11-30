@@ -12,6 +12,13 @@ ln -s $PWD/git/.gitignore $HOME/.gitignore
 ln -s $PWD/../private/git/gitconfig $HOME/.gitconfig
 
 
+# flake8 (needed for global python linting settings
+
+echo "Setting up python linting..."
+
+ln -s $PWD/python/flake8 $HOME/.config/flake8
+
+
 # zsh
 
 echo "Setting up zsh..."
