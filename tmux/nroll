@@ -1,0 +1,62 @@
+# check to see if session already exists
+tmux has-session -t nroll
+
+# if not...
+if [ $? != 0 ]
+then
+  PROJ_DIR='~/src/work/txi/abbvie'
+  APP_DIR="$PROJ_DIR/adept-app"
+  MODEL_DIR="$PROJ_DIR/adept-models"
+  INFRA_DIR="$PROJ_DIR/nroll-aws-terraform-templates"
+
+
+  # window 1 - terminal
+  tmux new-session -s nroll -n app -d
+
+  tmux split-window -h -t nroll
+  tmux split-window -v -t nroll
+
+  tmux send-keys -t nroll:1.1 "cd $APP_DIR" C-m
+  tmux send-keys -t nroll:1.1 'clear' C-m
+
+  tmux send-keys -t nroll:1.2 "cd $APP_DIR/web_ui" C-m
+  tmux send-keys -t nroll:1.2 "yarn test" C-m
+
+  tmux send-keys -t nroll:1.3 "cd $APP_DIR/web_api" C-m
+  tmux send-keys -t nroll:1.3 'clear' C-m
+
+
+  # window 2 - servers
+  tmux new-window -n servers -t nroll
+
+  tmux split-window -h -t nroll
+
+  tmux send-keys -t nroll:2.1 "cd $APP_DIR/web_api" C-m
+  tmux send-keys -t nroll:2.1 'docker-compose start abbvie-nroll-oracle' C-m
+  tmux send-keys -t nroll:2.1 'make run' C-m
+
+  tmux send-keys -t nroll:2.2 "cd $APP_DIR/web_ui" C-m
+  tmux send-keys -t nroll:2.2 'make' C-m
+  tmux send-keys -t nroll:2.2 'yarn start' C-m
+
+
+  # window 3 - model
+  tmux new-window -n abbvie-models -t nroll
+
+  tmux send-keys -t nroll:3 "cd $MODEL_DIR" C-m
+  tmux send-keys -t nroll:3 'clear' C-m
+
+
+  # window 4 - terraform
+  tmux new-window -n terraform -t nroll
+
+  tmux send-keys -t nroll:4.1 "cd $INFRA_DIR" C-m
+  tmux send-keys -t nroll:4.1 'clear' C-m
+
+  # select the first window
+  tmux select-window -t nroll:1
+  tmux select-pane -t nroll:1.1
+fi
+
+# attach to the session
+tmux attach -t nroll
