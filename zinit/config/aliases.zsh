@@ -33,6 +33,10 @@ alias la='ls -lA'
 # ===============
 alias open='xdg-open'
 
+## vpn
+alias vpn='nordvpn connect'
+alias novpn='nordvpn disconnect'
+
 
 # DOCKER
 # ======
