@@ -25,3 +25,15 @@ echo "Setting up zsh..."
 
 ln -s $PWD/zinit/.zshrc $HOME/.zshrc
 ln -s $PWD/zinit/.zprofile $HOME/.zprofile
+
+# asdf
+
+echo "Setting up asdf..."
+
+ln -s $PWD/asdf/.asdfrc $HOME/.asdfrc
+
+# tmux
+
+echo "Setting up tmux..."
+
+ln -s $PWD/.tmux.conf $HOME/.tmux.conf
