@@ -1,0 +1,21 @@
+SESSION_NAME=pml
+
+# check to see if session already exists
+tmux has-session -t $SESSION_NAME
+
+# if not...
+if [ $? != 0 ]
+then
+  PROJ_DIR='~/src/personal/learning/python/pml'
+  APP_DIR="$PROJ_DIR/pizza"
+
+
+  # window 1 - terminal
+  tmux new-session -s $SESSION_NAME -n app -d
+
+  tmux send-keys -t $SESSION_NAME:1.1 "cd $APP_DIR" C-m
+  tmux send-keys -t $SESSION_NAME:1.1 'clear' C-m
+fi
+
+# attach to the session
+tmux attach -t $SESSION_NAME
