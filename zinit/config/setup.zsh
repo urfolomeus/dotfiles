@@ -56,6 +56,12 @@ bindkey "$DOWN" down-line-or-beginning-search # Down
 . $HOME/.asdf/asdf.sh
 
 ###
+# pyenv
+###
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+###
 # DIRENV
 ###
 eval "$(direnv hook zsh)"
