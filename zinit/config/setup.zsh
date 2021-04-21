@@ -34,17 +34,11 @@ zle -N down-line-or-beginning-search
 
 # bind up and down arrows for use
 
-# NOTE: original tutorial had "^[[A" and "^[[B". This worked fine in OSX but
-# didn't work in Pop!OS. However I found by hitting ^v (default binding
-# to discover key bindings in Pop!OS) followed by key I wanted code for that
-# the else block worked
-if  [[ "$OSTYPE" == "darwin"* ]]; then
+# NOTE: I had to use the following in Pop!OS
+# UP="^[OA"
+# DOWN="^[OB"
   UP="^[[A"
   DOWN="^[[B"
-else
-  UP="^[OA"
-  DOWN="^[OB"
-fi
 
 bindkey "$UP" up-line-or-beginning-search # Up
 bindkey "$DOWN" down-line-or-beginning-search # Down
