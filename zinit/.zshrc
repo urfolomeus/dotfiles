@@ -24,7 +24,13 @@ zinit light-mode for \
 # mine
 ###
 
-export EDITOR="nvim"
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+
+autoload -Uz compinit && compinit
+
+export EDITOR="vim"
 
 zinit light-mode for \
     zsh-users/zsh-autosuggestions \
@@ -35,8 +41,8 @@ zinit light-mode for \
 
 source "$HOME/.zprofile"
 
-export SRC="${HOME}/src"
-export ZSH_CONFIG="${SRC}/dotfiles/zinit/config"
+export DOTBASE="${HOME}/src/dot"
+export ZSH_CONFIG="${DOTBASE}/dotfiles/zinit/config"
 
 for file in "${ZSH_CONFIG}/aliases.zsh" \
   "${ZSH_CONFIG}/env.zsh" \

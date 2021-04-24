@@ -9,6 +9,7 @@ then
   PROJ_DIR='~/src/work/txi/abbvie'
   APP_DIR="$PROJ_DIR/adept-app"
   MODEL_DIR="$PROJ_DIR/adept-models"
+  MODEL_SERVICE_DIR="$PROJ_DIR/adept-model-api"
   INFRA_DIR="$PROJ_DIR/nroll-aws-terraform-templates"
 
 
@@ -49,11 +50,19 @@ then
   tmux send-keys -t $SESSION_NAME:3 'clear' C-m
 
 
-  # window 4 - terraform
-  tmux new-window -n terraform -t $SESSION_NAME
+  # window 4 - model service
+  tmux new-window -n model_service -t $SESSION_NAME
 
-  tmux send-keys -t $SESSION_NAME:4.1 "cd $INFRA_DIR" C-m
+  tmux send-keys -t $SESSION_NAME:4.1 "cd $MODEL_SERVICE_DIR" C-m
   tmux send-keys -t $SESSION_NAME:4.1 'clear' C-m
+
+
+  # window 5 - infra
+  tmux new-window -n infra -t $SESSION_NAME
+
+  tmux send-keys -t $SESSION_NAME:5.1 "cd $INFRA_DIR" C-m
+  tmux send-keys -t $SESSION_NAME:5.1 'clear' C-m
+
 
   # select the first window
   tmux select-window -t $SESSION_NAME:1
