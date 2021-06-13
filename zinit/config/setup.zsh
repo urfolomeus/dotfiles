@@ -47,13 +47,14 @@ bindkey "$DOWN" down-line-or-beginning-search # Down
 ###
 # ASDF
 ###
-. $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/asdf.sh
+. /opt/asdf-vm/asdf.sh
 
 ###
 # pyenv
 ###
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 ###
 # DIRENV
