@@ -47,8 +47,10 @@ bindkey "$DOWN" down-line-or-beginning-search # Down
 ###
 # ASDF
 ###
-# . $HOME/.asdf/asdf.sh
-. /opt/asdf-vm/asdf.sh
+# pop/ubuntu
+. $HOME/.asdf/asdf.sh
+# arch
+# . /opt/asdf-vm/asdf.sh
 
 ###
 # pyenv
