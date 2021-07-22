@@ -37,4 +37,5 @@ ln -s $PWD/asdf/.asdfrc $HOME/.asdfrc
 echo "Setting up tmux..."
 
 ln -s $PWD/tmux/.tmux.conf $HOME/.tmux.conf
+ln -s $PWD/tmux/fitzbuild $HOME/fitzbuild
 ln -s $PWD/tmux/nroll $HOME/nroll
