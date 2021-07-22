@@ -63,3 +63,7 @@ eval "$(pyenv init -)"
 ###
 eval "$(direnv hook zsh)"
 
+###
+# pfetch
+###
+pfetch
