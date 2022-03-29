@@ -39,7 +39,7 @@ then
   tmux send-keys -t $SESSION_NAME:2.1 'make run' C-m
 
   tmux send-keys -t $SESSION_NAME:2.2 "cd $APP_DIR/web_ui" C-m
-  tmux send-keys -t $SESSION_NAME:2.2 'make' C-m
+  tmux send-keys -t $SESSION_NAME:2.2 'yarn install' C-m
   tmux send-keys -t $SESSION_NAME:2.2 'yarn start' C-m
 
 
