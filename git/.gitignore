@@ -5,3 +5,4 @@
 .byebug_history
 .elixir_ls
 zeus.log
+.envrc
