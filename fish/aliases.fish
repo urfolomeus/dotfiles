@@ -67,6 +67,8 @@ alias ke="kubectl exec"
 alias ki="kubectl exec -it"
 alias kg="kubectl get"
 alias kl="kubectl logs -f"
+alias kn="kubens"
+alias ktx="kubectx"
 alias kx="kubectl config get-contexts"
 
 
