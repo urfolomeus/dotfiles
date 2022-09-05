@@ -3,6 +3,7 @@
 
 alias :q='exit'
 alias c='clear'
+alias dy="dig +noall +answer +additional +short $argv[1] @dns.toys"
 # # Note: `> /dev/null` means "write to /dev/null instead of stdout", i.e. don't output to the terminal
 # #	`2>&1` means "write stderr to stdout", when combined with the above also sends stderr to /dev/null
 # #	combined this means "don't write out anything to the terminal", i.e. run in the background
@@ -11,6 +12,13 @@ alias c='clear'
 # alias dg='/home/alangardner/.local/share/DataGrip-2020.3/bin/datagrip.sh > /dev/null 2>&1 &'
 alias nudge='source ~/.config/fish/config.fish'
 # alias reclaim='sudo swapoff -a; sudo swapon -a'
+alias tsz="TZ='UTC' ts -m '%Y-%m-%dT%H:%M:%.S%z'"
+
+
+# WSL SPECIFIC
+# ============
+# npm i -g wsl-open to use the alias below
+alias xdg-open='wsl-open'
 
 # # grep commands
 # # alias grep='grep --color -nr'
@@ -24,7 +32,7 @@ alias nudge='source ~/.config/fish/config.fish'
 # DOCKER
 # ======
 alias dk='docker'
-alias dkc='docker-compose'
+alias dkc='docker compose'
 
 
 # GIT
@@ -61,11 +69,7 @@ alias gsta="git stash apply"
 # KUBERNETES
 # ==========
 alias k="kubectl"
-alias kc="kubectl config"
-alias kd="kubectl delete"
-alias ke="kubectl exec"
-alias ki="kubectl exec -it"
-alias kg="kubectl get"
+alias kall="kubectl api-resources --verbs=list --namespaced -o name | sort | grep -v events | xargs -n 1 kubectl get --show-kind --ignore-not-found"
 alias kl="kubectl logs -f"
 alias kn="kubens"
 alias ktx="kubectx"

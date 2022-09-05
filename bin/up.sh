@@ -12,10 +12,7 @@ ln -s $PWD/asdf/.asdfrc $HOME/.asdfrc
 # fish
 
 echo "Setting up fish..."
-mkdir -p ~/.config/fish/functions
-ln -s $PWD/fish/config.fish $HOME/.config/fish/config.fish
-ln -s $PWD/fish/fish_plugins $HOME/.config/fish/fish_plugins
-cp $PWD/fish/mcd.fish $HOME/.config/fish/functions/mcd.fish
+source $PWD/fish/fish_up.sh
 
 # git
 
