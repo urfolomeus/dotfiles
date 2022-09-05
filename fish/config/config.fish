@@ -9,8 +9,8 @@ case Linux
     source ~/.config/fish/linux/env.fish
     source ~/.config/fish/linux/system.fish
 case Darwin
-    source ~/.config/fish/osx/env.fish
-    source ~/.config/fish/osx/system.fish
+    source ~/.config/fish/mac/env.fish
+    source ~/.config/fish/mac/system.fish
 case '*'
     echo `Do not know about (uname)`
 end
