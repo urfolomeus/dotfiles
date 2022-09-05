@@ -1,8 +1,7 @@
 .DS_Store
 
-.tool-versions
 .*vimrc
 .byebug_history
 .elixir_ls
-zeus.log
 .envrc
+zeus.log
