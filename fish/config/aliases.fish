@@ -70,6 +70,7 @@ alias gsta="git stash apply"
 # ==========
 alias k="kubectl"
 alias kall="kubectl api-resources --verbs=list --namespaced -o name | sort | grep -v events | xargs -n 1 kubectl get --show-kind --ignore-not-found"
+alias kd="kubectl describe"
 alias kl="kubectl logs -f"
 alias kn="kubens"
 alias ktx="kubectx"
@@ -79,4 +80,9 @@ alias kx="kubectl config get-contexts"
 # # RUBY
 # # ====
 # alias be="bundle exec"
+
+
+# TERRAFORM
+# =========
+alias tf="terraform"
 
