@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 source ~/.config/fish/config/aliases.fish
+source ~/.config/fish/config/env.fish
 
 switch (uname)
 case Linux
