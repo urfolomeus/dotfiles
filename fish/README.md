@@ -20,10 +20,10 @@ ln -s $PWD/fish $HOME/.config/fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
-We can check that this worked by installing the pure prompt.
+We can check that this worked by installing the packages in the [fish_plugins](./fish_plugins) file, e.g.
 
 ```shell
-fisher install pure-fish/pure
+fisher install matchai/spacefish
 ```
 
 ## Adding custom functions
