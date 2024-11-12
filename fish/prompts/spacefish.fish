@@ -3,14 +3,14 @@
 # prompt
 set SPACEFISH_CHAR_SYMBOL "❯"
 set SPACEFISH_PROMPT_DEFAULT_PREFIX ""
-set SPACEFISH_PROMPT_ORDER user host dir git docker kubecontext aws time exec_time line_sep venv char
+set SPACEFISH_PROMPT_ORDER user host dir git node pyenv docker kubecontext aws time exec_time line_sep venv char
 
 # dir
 set SPACEFISH_DIR_COLOR 999
 set SPACEFISH_DIR_PREFIX ""
 set SPACEFISH_DIR_TRUNC_REPO false
 
-#git
+# git
 set SPACEFISH_GIT_PREFIX ""
 set SPACEFISH_GIT_SYMBOL ""
 
@@ -20,7 +20,13 @@ set SPACEFISH_GIT_STATUS_COLOR 666
 set SPACEFISH_GIT_STATUS_PREFIX ""
 set SPACEFISH_GIT_STATUS_SUFFIX ""
 
-#docker
+# node
+# using defaults...
+
+# pyenv
+# using defaults...
+
+# docker
 set SPACEFISH_DOCKER_COLOR 666
 set SPACEFISH_DOCKER_PREFIX "["
 set SPACEFISH_DOCKER_SUFFIX "]"

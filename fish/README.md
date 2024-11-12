@@ -13,6 +13,19 @@ cd <dotfiles folder>
 ln -s $PWD/fish $HOME/.config/fish
 ```
 
+## Install fish
+
+```shell
+brew install fish
+```
+
+## Set fish as our default shell
+
+```shell
+echo $(which fish) | sudo tee -a /etc/shells
+chsh -s $(which fish) $USER
+```
+
 ## Setup fisher
 
 
