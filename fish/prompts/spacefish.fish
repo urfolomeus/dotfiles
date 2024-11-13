@@ -1,5 +1,7 @@
 # SPACEFISH OPTIONS
 
+# [spacefish](https://github.com/matchai/spacefish)
+
 # prompt
 set SPACEFISH_CHAR_SYMBOL "❯"
 set SPACEFISH_PROMPT_DEFAULT_PREFIX ""
