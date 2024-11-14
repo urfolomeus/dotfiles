@@ -1,0 +1,53 @@
+## MY MAPPINGS ##
+
+## CONTROL SERVICE
+
+# turn Yabai on/off
+ctrl + alt - r : yabai -m restart
+ctrl + alt - s : yabai -m start
+ctrl + alt - q : yabai -m stop
+
+# toggle Yabai for focused window (and center on screen if not managed)
+ctrl + alt - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+
+## WINDOW MANAGEMENT WITHIN A SPACE
+
+# navigate between windows in a space
+ctrl + alt - h : yabai -m window --focus west
+ctrl + alt - j : yabai -m window --focus south
+ctrl + alt - k : yabai -m window --focus north
+ctrl + alt - l : yabai -m window --focus east
+
+# move window within space
+ctrl + alt + shift - h : yabai -m window --warp west
+ctrl + alt + shift - j : yabai -m window --warp south
+ctrl + alt + shift - k : yabai -m window --warp north
+ctrl + alt + shift - l : yabai -m window --warp east
+
+# swap windows around x-axis or y-axis
+ctrl + alt + shift - x : yabai -m space --mirror x-axis
+ctrl + alt + shift - y : yabai -m space --mirror y-axis
+
+# rotate space 90 degrees
+ctrl + alt + shift - r : yabai -m space --rotate 90
+
+# rebalance windows
+ctrl + alt + shift - 0 : yabai -m space --balance
+
+# toggle gap or padding between windows
+ctrl + alt + shift - g : yabai -m window --toggle gap
+ctrl + alt + shift - p : yabai -m window --toggle padding
+
+
+## WINDOW MANAGEMENT BETWEEN SPACES
+
+# NOTE: this requires the scripting addition to be enabled. See the README for more information.
+
+# move window to next/previous space and follow focus
+ctrl + shift - left : yabai -m window --space prev; yabai -m window --focus recent
+ctrl + shift - right : yabai -m window --space next; yabai -m window --focus recent
+ctrl + shift - 1 : yabai -m window --space 1; yabai -m window --focus recent
+ctrl + shift - 2 : yabai -m window --space 2; yabai -m window --focus recent
+ctrl + shift - 3 : yabai -m window --space 3; yabai -m window --focus recent
+ctrl + shift - 4 : yabai -m window --space 4; yabai -m window --focus recent
