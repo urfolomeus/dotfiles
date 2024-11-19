@@ -7,35 +7,24 @@ tmux has-session -t $SESSION_NAME
 # if not...
 if [ $? != 0 ]
 then
-  PROJ_DIR='~/src/work/narrativium/fitzbuild'
+  PROJ_DIR='~/src/work/narrativium/fitzbuild.github.io'
   GATSBY_DIR="$PROJ_DIR/gatsby"
   SANITY_DIR="$PROJ_DIR/sanity"
 
 
-  # window 1 - terminal
+  # window 1 - gatsby
   tmux new-session -s $SESSION_NAME -n app -d
-
-  tmux split-window -h -t $SESSION_NAME
 
   tmux send-keys -t $SESSION_NAME:1.1 "cd $GATSBY_DIR" C-m
   tmux send-keys -t $SESSION_NAME:1.1 'clear' C-m
 
-  tmux send-keys -t $SESSION_NAME:1.2 "cd $SANITY_DIR" C-m
-  tmux send-keys -t $SESSION_NAME:1.2 'clear' C-m
 
+  # window 2 - sanity
 
-  # window 2 - servers
   tmux new-window -n servers -t $SESSION_NAME
 
-  tmux split-window -h -t $SESSION_NAME
-
-  tmux send-keys -t $SESSION_NAME:2.1 "cd $GATSBY_DIR" C-m
-  tmux send-keys -t $SESSION_NAME:2.1 'npm i' C-m
-  tmux send-keys -t $SESSION_NAME:2.1 'npm start' C-m
-
-  tmux send-keys -t $SESSION_NAME:2.2 "cd $SANITY_DIR" C-m
-  tmux send-keys -t $SESSION_NAME:2.2 'npm i' C-m
-  tmux send-keys -t $SESSION_NAME:2.2 'npm start' C-m
+  tmux send-keys -t $SESSION_NAME:2.1 "cd $SANITY_DIR" C-m
+  tmux send-keys -t $SESSION_NAME:2.1 'clear' C-m
 
 
   # select the first window
