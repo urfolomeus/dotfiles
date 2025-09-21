@@ -4,3 +4,7 @@
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = true
+
+# Disable the GCP module, hiding it from the prompt completely
+[gcloud]
+disabled = true
