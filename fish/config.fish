@@ -20,6 +20,7 @@ if status is-interactive
       end
   case Darwin
       source ~/.config/fish/config/mac/aliases.fish
+      source ~/.config/fish/config/mac/completions.fish
       source ~/.config/fish/config/mac/env.fish
       source ~/.config/fish/config/mac/system.fish
   case '*'
