@@ -70,3 +70,6 @@ alias be="bundle exec"
 # TERRAFORM
 alias tf="terraform"
 
+# ZOXIDE
+alias cd="z"
+
