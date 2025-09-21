@@ -1,7 +1,9 @@
 .DS_Store
-
 .*vimrc
 .byebug_history
+.claude
 .elixir_ls
 .envrc
+.venv
+TODO_acg.md
 zeus.log
