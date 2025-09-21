@@ -10,6 +10,12 @@ alias tsz="TZ='UTC' ts -m '%Y-%m-%dT%H:%M:%.S%z'"
 alias dk='docker'
 alias dkc='docker compose'
 
+# EZA
+alias els='eza --icons=always --long --all -I .git'
+alias ela='eza --icons=always --long --all -I .git --no-permissions --no-filesize --no-user --no-time'
+alias elaf='eza --icons=always --long --all -I .git --no-permissions --no-user --no-time'
+alias tree='eza --icons=always --tree --all -I ".git|.venv|node_modules"'
+
 
 # GIT
 alias ga="git add -A"
