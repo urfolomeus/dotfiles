@@ -2,6 +2,7 @@
 alias :q='exit'
 alias c='clear'
 alias dy="dig +noall +answer +additional +short $argv[1] @dns.toys"
+alias e=$EDITOR
 alias nudge='source ~/.config/fish/config.fish'
 alias serve="python -m http.server"
 alias tsz="TZ='UTC' ts -m '%Y-%m-%dT%H:%M:%.S%z'"
