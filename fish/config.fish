@@ -1,32 +1,48 @@
+set -g __config_load_failed 0
+
+function __source_required --description 'Source a config file, or complain loudly if it is missing'
+  if test -f $argv[1]
+    source $argv[1]
+  else
+    echo "config.fish: expected file not found: $argv[1]" >&2
+    set -g __config_load_failed 1
+    return 1
+  end
+end
+
 if status is-interactive
   # Common config
-  source ~/.config/fish/config/common/aliases.fish
-  source ~/.config/fish/config/common/env.fish
-  source ~/.config/fish/config/common/prompt.fish
-  source ~/.config/fish/config/common/system.fish
+  __source_required ~/.config/fish/config/common/env.fish
+  __source_required ~/.config/fish/config/common/prompt.fish
+  __source_required ~/.config/fish/config/common/system.fish
+  __source_required ~/.config/fish/config/common/aliases.fish
 
+  # NOTE: aliases are sourced after common config so they have access to any
+  # environment variables set in the env.fish or system.fish files.
 
   # OS-specific config
   switch (uname)
   case Linux
       if check_wsl then
-    source ~/.config/fish/config/wsl/aliases.fish
-    source ~/.config/fish/config/wsl/env.fish
-    source ~/.config/fish/config/wsl/system.fish
+    __source_required ~/.config/fish/config/wsl/env.fish
+    __source_required ~/.config/fish/config/wsl/system.fish
+    __source_required ~/.config/fish/config/wsl/aliases.fish
       else
-          source ~/.config/fish/config/linux/aliases.fish
-    source ~/.config/fish/config/linux/env.fish
-    source ~/.config/fish/config/linux/system.fish
+          __source_required ~/.config/fish/config/linux/aliases.fish
+    __source_required ~/.config/fish/config/linux/env.fish
+    __source_required ~/.config/fish/config/linux/system.fish
       end
   case Darwin
-      source ~/.config/fish/config/mac/aliases.fish
-      source ~/.config/fish/config/mac/completions.fish
-      source ~/.config/fish/config/mac/env.fish
-      source ~/.config/fish/config/mac/system.fish
+      __source_required ~/.config/fish/config/mac/completions.fish
+      __source_required ~/.config/fish/config/mac/env.fish
+      __source_required ~/.config/fish/config/mac/system.fish
+      __source_required ~/.config/fish/config/mac/aliases.fish
   case '*'
       echo `Do not know about (uname)`
   end
 end
+
+functions -e __source_required
 
 
 # pnpm
@@ -35,3 +51,17 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/alan/.lmstudio/bin
+# End of LM Studio CLI section
+
+
+# Pi
+# fish_add_path returns 1 when it changes nothing (path already present or
+# missing), so keep it off the tail of the script where it would leak into
+# config.fish's exit status.
+fish_add_path "/Users/alan/.asdf/installs/nodejs/24.14.0/bin"
+
+# Exit non-zero if any expected config file was missing.
+test $__config_load_failed -eq 0
