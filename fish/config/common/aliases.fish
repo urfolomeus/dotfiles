@@ -11,6 +11,7 @@ alias tsz="TZ='UTC' ts -m '%Y-%m-%dT%H:%M:%.S%z'"
 alias dk='docker'
 alias dkis='docker images --format "{{.Repository}}:{{.Tag}}"'
 alias dkc='docker compose'
+alias dkcp='docker compose ps -a --format "table {{.Service}}\t{{.Ports}}\t{{.CreatedAt}}\t{{.Status}}"'
 
 # EZA
 alias els='eza --icons=always --long --all -I .git'
