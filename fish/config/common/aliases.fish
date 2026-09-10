@@ -9,6 +9,7 @@ alias tsz="TZ='UTC' ts -m '%Y-%m-%dT%H:%M:%.S%z'"
 
 # DOCKER
 alias dk='docker'
+alias dkis='docker images --format "{{.Repository}}:{{.Tag}}"'
 alias dkc='docker compose'
 
 # EZA
