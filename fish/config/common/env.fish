@@ -1,6 +1,6 @@
 # ENV VARS
-set -gx EDITOR "zed"
-set -gx VISUAL "zed"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
 set -gx fish_greeting "🤖 Smiley day to ya!"
 
 # PATH
