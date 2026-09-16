@@ -46,24 +46,5 @@ end
 
 functions -e __source_required
 
-
-# pnpm
-set -gx PNPM_HOME "/Users/alan/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/alan/.lmstudio/bin
-# End of LM Studio CLI section
-
-
-# Pi
-# fish_add_path returns 1 when it changes nothing (path already present or
-# missing), so keep it off the tail of the script where it would leak into
-# config.fish's exit status.
-fish_add_path "/Users/alan/.asdf/installs/nodejs/24.14.0/bin"
-
 # Exit non-zero if any expected config file was missing.
 test $__config_load_failed -eq 0
