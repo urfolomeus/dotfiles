@@ -7,7 +7,6 @@
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "git.enableSmartCommit": true,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.fontFamily": "DankMono Nerd Font",
   "terminal.integrated.fontLigatures.enabled": true,
