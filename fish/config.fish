@@ -4,7 +4,9 @@ function __source_required --description 'Source a config file, or complain loud
   if test -f $argv[1]
     source $argv[1]
   else
-    echo "config.fish: expected file not found: $argv[1]" >&2
+    echo "config.fish: missing expected config file: $argv[1]" >&2
+    echo "  Your fish environment is only partially loaded. This usually means the" >&2
+    echo "  dotfiles are not fully checked out or a symlink is broken." >&2
     set -g __config_load_failed 1
     return 1
   end
