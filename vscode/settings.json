@@ -20,4 +20,5 @@
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
+  "workbench.startupEditor": "none",
 }
