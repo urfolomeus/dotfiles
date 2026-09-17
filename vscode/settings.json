@@ -10,6 +10,8 @@
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
   "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.fontFamily": "DankMono Nerd Font",
   "terminal.integrated.fontLigatures.enabled": true,
   "terminal.integrated.fontSize": 14,
