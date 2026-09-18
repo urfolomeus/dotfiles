@@ -12,6 +12,8 @@
   "git.blame.editorDecoration.enabled": true,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
+  "js/ts.experimental.useTsgo": true,
+  "scm.repositories.selectionMode": "single",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -22,5 +24,5 @@
   "workbench.iconTheme": "catppuccin-frappe",
   "workbench.preferredDarkColorTheme": "Catppuccin Frappé",
   "workbench.preferredLightColorTheme": "Catppuccin Latte",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
 }
