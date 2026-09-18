@@ -15,4 +15,14 @@
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus",
   },
+  {
+    "key": "cmd+ctrl+i",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "chatInputHasFocus",
+  },
+  {
+    "key": "cmd+ctrl+i",
+    "command": "workbench.action.chat.open",
+    "when": "!chatInputHasFocus",
+  },
 ]
