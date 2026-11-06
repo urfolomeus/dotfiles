@@ -10,7 +10,7 @@ honor_ps1 = true
 
 [appearance.window]
 zoom_level = 100
-override_opacity = 75
+override_opacity = 80
 override_blur = 10
 
 [appearance.text]
@@ -22,14 +22,14 @@ notebook_font_size = 14.0
 ligature_rendering_enabled = true
 
 [appearance.icon]
-app_icon = "glow"
+app_icon = "original"
 
 [appearance.input]
 input_mode = "pinned_to_bottom"
 
 [appearance.themes]
-system_theme = true
-theme = "dracula"
+system_theme = false
+theme = { custom = { name = "Catppuccin Frappe", path = "catppuccin_frappe.yml" } }
 selected_system_themes = {
   dark = { custom = { name = "Catppuccin Frappe", path = "catppuccin_frappe.yml" } },
   light = { custom = { name = "Catppuccin Latte", path = "catppuccin_latte.yml" } },
@@ -41,6 +41,7 @@ should_dim_inactive_panes = true
 [appearance.vertical_tabs]
 display_granularity = "panes"
 enabled = false
+use_latest_prompt_as_title = false
 
 [code]
 
@@ -80,6 +81,7 @@ custom_secret_regex_list = [
   { name = "Anthropic API Key", pattern = '\bsk-ant-api\d{0,2}-[a-zA-Z0-9\-]{80,120}\b' },
   { name = "Generic SK API Key", pattern = '\bsk-[a-zA-Z0-9\-]{10,100}\b' },
   { name = "Fireworks API Key", pattern = '\bfw_[a-zA-Z0-9]{24}\b' },
+  { name = "Warp API Key", pattern = '\bwk-[0-9]+\.[A-Fa-f0-9.\-]+\b' },
 ]
 
 [agents]
