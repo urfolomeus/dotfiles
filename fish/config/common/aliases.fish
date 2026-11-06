@@ -48,6 +48,7 @@ alias gpsh="git push heroku"
 alias gpso="git push origin"
 alias grh="git reset HEAD"
 alias gs="git st"
+alias gsi="git st --ignore-submodules"
 alias gst="git stash"
 alias gsta="git stash apply"
 
