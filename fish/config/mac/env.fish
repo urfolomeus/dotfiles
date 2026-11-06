@@ -1,8 +1,7 @@
 # PATH
-fish_add_path /opt/homebrew/bin
-fish_add_path /opt/homebrew/sbin
-fish_add_path $HOME/.local/bin
-fish_add_path $HOME/src/tools/terravision
+fish_add_path -g /opt/homebrew/bin
+fish_add_path -g /opt/homebrew/sbin
+fish_add_path -g $HOME/.local/bin
 
 
 # ENV VARS

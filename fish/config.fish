@@ -13,32 +13,15 @@ function __source_required --description 'Source a config file, or complain loud
 end
 
 if status is-interactive
-  # Common config
-  __source_required ~/.config/fish/config/common/env.fish
-  __source_required ~/.config/fish/config/common/prompt.fish
-  __source_required ~/.config/fish/config/common/system.fish
-  __source_required ~/.config/fish/config/common/aliases.fish
-
-  # NOTE: aliases are sourced after common config so they have access to any
-  # environment variables set in the env.fish or system.fish files.
-
-  # OS-specific config
   switch (uname)
   case Linux
       if check_wsl then
-    __source_required ~/.config/fish/config/wsl/env.fish
-    __source_required ~/.config/fish/config/wsl/system.fish
-    __source_required ~/.config/fish/config/wsl/aliases.fish
+          __source_required ~/.config/fish/config/wsl/config.fish
       else
-          __source_required ~/.config/fish/config/linux/aliases.fish
-    __source_required ~/.config/fish/config/linux/env.fish
-    __source_required ~/.config/fish/config/linux/system.fish
+          __source_required ~/.config/fish/config/linux/config.fish
       end
   case Darwin
-      __source_required ~/.config/fish/config/mac/completions.fish
-      __source_required ~/.config/fish/config/mac/env.fish
-      __source_required ~/.config/fish/config/mac/system.fish
-      __source_required ~/.config/fish/config/mac/aliases.fish
+      __source_required ~/.config/fish/config/mac/config.fish
   case '*'
       echo `Do not know about (uname)`
   end
